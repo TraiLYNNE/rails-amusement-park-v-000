@@ -6,12 +6,11 @@ Rails.application.routes.draw do
   #Resources
   resources :users
   resources :attractions
-  resources :rides, only: [:create]
 
   #regular routes
   get '/signin', to: 'sessions#new'
   post '/signin', to: 'sessions#create'
-  post '/rides/new', to: 'rides#new'
+  post '/rides/create', to: 'rides#create'
   delete '/signout', to: 'sessions#destoy'
 
 end
